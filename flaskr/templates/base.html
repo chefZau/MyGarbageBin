@@ -13,6 +13,7 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='style.css') }}"
     />
+    {% block style %}{% endblock style %}
     <title>{% block title %}{% endblock title %}</title>
   </head>
 
@@ -50,11 +51,10 @@
               </ul>
             </div>
           </nav>
-
-          {% block body %}{% endblock body %}
         </div>
         <div class="col"></div>
       </div>
+      {% block body %}{% endblock body %}
     </div>
 
     <script
